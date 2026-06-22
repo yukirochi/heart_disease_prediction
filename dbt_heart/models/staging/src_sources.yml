@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: heart_raw_data
+    schema: raw
+
+    tables:
+      - name: heart_raw

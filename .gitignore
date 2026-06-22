@@ -1,0 +1,7 @@
+.venv
+.env
+__pycache__
+dbt_heart/.env
+dbt_heart/profiles.yml
+env
+logs
