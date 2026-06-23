@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: heart_staging_data
+    schema: staging
+
+    tables:
+      - name: heart_staging
