@@ -5,7 +5,7 @@ WITH raw_data AS (
 typed AS (
     SELECT
         COALESCE(AGE, MEDIAN(AGE) OVER())::NUMERIC        AS "age_l",
-        CASE WHEN LOWER(GENDER) = 'male' THEN 1 ELSE 2 END AS "gender_l",
+        CASE WHEN LOWER(GENDER) = 'male' THEN 1 ELSE 0 END AS "gender_l",
         LOWER(ALCOHOL_CONSUMPTION) AS "alc",
         LOWER(STRESS_LEVEL) AS "sl",
         LOWER(SUGAR_CONSUMPTION) as "sc",
@@ -27,7 +27,7 @@ cleaned AS (
         {{ convert_bool('DIABETES') }}              AS "diabetes",
         {{ convert_bool('HIGH_BLOOD_PRESSURE') }}   AS "high_blood_pressure",
         {{ convert_bool('LOW_HDL_CHOLESTEROL') }}   AS "low_hdl_cholesterol",
-        {{ convert_bool('HIGH_LDL_CHOLESTEROL') }}   AS "low_ldl_cholesterol",
+        {{ convert_bool('HIGH_LDL_CHOLESTEROL') }}   AS "high_ldl_cholesterol",
         {{ convert_difficulty('"alc"')}} AS "alcohol_consumption",
         {{ convert_difficulty('"sl"')}} AS "stress_level",
         {{ convert_difficulty('"sc"')}} AS "sugar_consumption",

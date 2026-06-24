@@ -9,7 +9,7 @@
                 WHEN (MODE({{column_name}}) OVER (PARTITION BY {{ partition_cols }} ))  = 'low' THEN 1 
                 WHEN (MODE({{column_name}}) OVER (PARTITION BY {{ partition_cols }} )) = 'medium' THEN 2
                 WHEN (MODE({{column_name}}) OVER (PARTITION BY {{ partition_cols }} ))  = 'high' THEN 3
-                ELSE 2
+                ELSE 1
                 END
                 )
     END

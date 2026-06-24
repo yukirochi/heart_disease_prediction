@@ -21,7 +21,9 @@ df_main = curr.execute('SELECT * FROM heart_main').fetch_pandas_all()
 df_p1 = curr.execute('SELECT * FROM heart_partial_one').fetch_pandas_all()
 df_p2 = curr.execute('SELECT * FROM heart_partial_two').fetch_pandas_all()
 
-# print(df.dtypes)
+
+
+print(df_main.dtypes)
 
 
 

@@ -5,3 +5,4 @@ dbt_heart/.env
 dbt_heart/profiles.yml
 env
 logs
+REVIEW.md
